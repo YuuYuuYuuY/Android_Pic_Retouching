@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <item
+        android:id="@+id/album"
+        android:icon="@drawable/add"
+        app:showAsAction="always"
+        android:title="Choose from album" />
+
+    <item
+        android:id="@+id/picedit"
+        android:icon="@drawable/edit"
+        android:title="Enter PicEdit"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/synchronize"
+        android:icon="@drawable/synchronize"
+        android:title="Synchronize"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/save"
+        android:icon="@drawable/save"
+        android:title="Save current image"
+        app:showAsAction="always"/>
+
+
+</menu>

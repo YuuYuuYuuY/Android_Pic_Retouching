@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Edit"
+    android:background="@color/white">
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_edit"
+            app:title="Edit"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_gravity="top"
+            android:background="@color/bright_blue"
+            android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="670dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/adver1"
+            android:orientation="vertical">
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/picViewPager"
+                android:layout_width="match_parent"
+                android:layout_height="500dp"
+                android:background="@color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/appBarLayout"
+                app:layout_constraintVertical_bias="0.0" />
+
+
+
+
+            <TextView
+                android:id="@+id/text_from"
+                android:layout_width="match_parent"
+                android:layout_height="41dp"
+                android:text="From*: "
+                android:fontFamily="@font/font_used"
+                android:textAlignment="center"
+                android:textColor="@android:color/white"
+                android:textSize="16dp" />
+
+            <EditText
+                android:id="@+id/edit_from"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:textSize="16dp"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:id="@+id/text_to"
+                android:layout_width="match_parent"
+                android:layout_height="41dp"
+                android:text="To: "
+                android:fontFamily="@font/font_used"
+                android:textAlignment="center"
+                android:textColor="@android:color/white"
+                android:textSize="16dp" />
+
+            <EditText
+                android:id="@+id/edit_to"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:textSize="16dp"
+                android:hint="separate by commas if multiple"
+                android:textColorHint="@android:color/darker_gray"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:id="@+id/text_subject"
+                android:layout_width="match_parent"
+                android:layout_height="43dp"
+                android:text="Subject:"
+                android:fontFamily="@font/font_used"
+                android:textAlignment="center"
+                android:textColorHint="@color/white"
+                android:textColor="@android:color/white"
+                android:textSize="16dp" />
+
+
+            <EditText
+                android:id="@+id/edit_subject"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:textColor="@android:color/white"
+                android:textSize="16dp" />
+
+            <TextView
+                android:id="@+id/body"
+                android:layout_width="match_parent"
+                android:layout_height="37dp"
+                android:text="Body: "
+                android:fontFamily="@font/font_used"
+                android:textAlignment="center"
+                android:textColor="@android:color/white"
+                android:textSize="16dp" />
+
+            <EditText
+                android:id="@+id/content"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:fontFamily="@font/font_used"
+                android:textColor="@android:color/white"
+                android:textSize="16dp" />
+
+
+            <ImageButton
+                android:id="@+id/send"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_marginBottom="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.269"
+                app:layout_constraintStart_toStartOf="parent"
+                app:srcCompat="@drawable/send" />
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+    <!--    <github.com.st235.lib_expandablebottombar.ExpandableBottomBar-->
+<!--        android:id="@+id/expandable_bottom_bar"-->
+<!--        android:layout_width="430dp"-->
+<!--        android:layout_height="93dp"-->
+<!--        android:layout_margin="20dp"-->
+<!--        android:layout_marginBottom="48dp"-->
+<!--        app:exb_backgroundColor="#2e2e2e"-->
+<!--        app:exb_backgroundCornerRadius="25dp"-->
+<!--        app:exb_itemInactiveColor="#fff"-->
+<!--        app:exb_itemStyle="normal"-->
+<!--        app:exb_items="@menu/bottombar"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.0"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/picViewPager"-->
+<!--        app:layout_constraintVertical_bias="1.0" />-->
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
